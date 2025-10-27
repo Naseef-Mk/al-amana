@@ -1,0 +1,54 @@
+/* src/index.css */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply font-sans bg-light text-dark;
+    }
+}
+
+@layer components {
+    .container-custom {
+        @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    }
+    
+    .btn-primary {
+        @apply bg-primary hover:bg-blue-700 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    }
+    
+    .btn-secondary {
+        @apply bg-secondary hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105;
+    }
+    
+    .section-padding {
+        @apply py-16 sm:py-20 lg:py-24;
+    }
+
+    /* Added new styles */
+    .card {
+        @apply bg-white shadow-md rounded-lg p-6;
+    }
+
+    .card-header {
+        @apply font-bold text-xl mb-4;
+    }
+
+    .card-body {
+        @apply text-gray-700;
+    }
+}
+    /* Utility components added */
+    .hero {
+        @apply section-padding bg-primary text-white flex items-center justify-center;
+    }
+
+    .btn {
+        @apply inline-block font-semibold py-2 px-4 rounded;
+    }
+
+    .btn-outline {
+        @apply border border-white text-white bg-transparent hover:bg-white hover:text-primary transition;
+    }
